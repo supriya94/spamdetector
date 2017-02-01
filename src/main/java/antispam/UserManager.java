@@ -48,11 +48,11 @@ public class UserManager {
         System.out.println("\nSpam:");
         for(User user : users) {
             //Spammer might not have any friends
-            if(user.friends == 0)
+            if(user.getFriends() == 0)
                 user.incSpam();
 
             //Spammer sends too many friend requests
-            if(user.requests > users.size()/2)
+            if(user.getRequests > users.size()/2)
                 user.incSpam();
             
             if(user.getSpam() == 1)
