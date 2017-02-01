@@ -16,4 +16,6 @@ A user suspected to be spam is identified by the following characteristics:
 ## Usage
 
 ```
+mvn package
+java -cp target/spam-classifier-1.0-SNAPSHOT.jar antispam.Main [input files]
 ```
