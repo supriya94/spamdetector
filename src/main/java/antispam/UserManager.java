@@ -47,6 +47,14 @@ public class UserManager {
         ArrayList<User> notSpam = new ArrayList<User>();
         System.out.println("\nSpam:");
         for(User user : users) {
+            //Spammer might not have any friends
+            if(user.friends == 0)
+                user.incSpam();
+
+            //Spammer sends too many friend requests
+            if(user.requests > users.size()/2)
+                user.incSpam();
+            
             if(user.getSpam() == 1)
                 System.out.println(user.getName());
             else
