@@ -9,13 +9,11 @@ import java.util.ArrayList;
 public interface SpamClassifier {
     /**
      *Identify action and perform necessary changes to users involved
-     * @param cmd
      */
     public void decodeCommand(String cmd);
 
     /**
      * Analyze a sequence of activities and classify users
-     * @param source
      */
     public void classifySpam(String source);
 }
