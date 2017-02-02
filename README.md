@@ -26,6 +26,6 @@ java -cp target/spam-classifier-1.0-SNAPSHOT.jar antispam.Main input_file1 [inpu
 
 * A user is suspected to be a spammer if the number of requests sent is greater than half the total number of users. This measure can be changed to reflect appropriate spammer behaviour.  
 
-* It is assumed that a user can either accept or reject a friend request. If a friend request is accepted, spam can be reported but the spammer is not removed from the users friend list.  
+* It is assumed that a user can either accept or reject a friend request. If a friend request is accepted, spam can be reported but the spammer is not removed from the user's friend list.  
 
 * A suspended user is also not removed from other users' friend lists. This does not affect the classification of spam.  
