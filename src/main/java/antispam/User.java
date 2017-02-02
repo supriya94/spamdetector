@@ -33,20 +33,24 @@ public class User {
     }
 
     public void addFriend() {
-        friends++;
+        ++friends;
     }
 
     public void incRequests() {
-        requests++;
+        ++requests;
     }
 
     public void incSpam() {
-        if(getSpam() < 1)
+        if(spam < 1)
             spam += 1;
     }
 
     public void decSpam() {
         if(spam > -1)
             spam -= 1;
+    }
+
+    public void setSpam(int value) {
+        spam = value;
     }
 }

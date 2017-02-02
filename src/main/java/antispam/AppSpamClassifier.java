@@ -10,7 +10,7 @@ public class AppSpamClassifier implements SpamClassifier {
 
     private UserManager userManager;
 
-    public void decodeAction(String command) {
+    public void decodeCommand(String command) {
 
         String[] components = command.split(" ");
         User userA = userManager.addUser(components[1]);
@@ -28,12 +28,10 @@ public class AppSpamClassifier implements SpamClassifier {
 
         try {
             br = new BufferedReader(new FileReader(source));
-
             command = br.readLine();
 
             while (command != null) {
-                decodeAction(command);
-
+                decodeCommand(command);
                 command = br.readLine();
             }
         } catch(Exception e) {

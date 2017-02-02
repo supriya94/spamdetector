@@ -11,7 +11,7 @@ public interface SpamClassifier {
      *Identify action and perform necessary changes to users involved
      * @param cmd
      */
-    public void decodeAction(String cmd);
+    public void decodeCommand(String cmd);
 
     /**
      * Analyze a sequence of activities and classify users
